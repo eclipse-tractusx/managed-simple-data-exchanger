@@ -22,4 +22,5 @@
 *.tmproj
 .vscode/
 
-
+# ignore tgz
+/charts/*.tgz
