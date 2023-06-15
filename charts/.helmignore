@@ -16,9 +16,10 @@
 *.tmp
 *.orig
 *~
-*.tgz
 # Various IDEs
 .project
 .idea/
 *.tmproj
 .vscode/
+
+
