@@ -29,8 +29,9 @@ on:
 
   pull_request:
     paths:
-      - charts/**
-      
+      - charts/**  
+  workflow_dispatch:
+
 jobs:
   lint-test:
     runs-on: ubuntu-latest
