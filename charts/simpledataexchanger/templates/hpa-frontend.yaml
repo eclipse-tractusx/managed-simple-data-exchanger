@@ -22,7 +22,7 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "sde.fullname" . }}
+  name: {{ include "sde.fullname" . }}-frontend
   labels:
     {{- include "sde.labels" . | nindent 4 }}
 spec:
