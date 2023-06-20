@@ -6,10 +6,6 @@ This helm chart installs the SDE application which consists of
    * [Backend](https://github.com/catenax-ng/tx-managed-simple-data-exchanger-backend) 
     
 
-For further information please refer to Technical Documentation.
-
-The referenced container images are for demonstration purposes only.
-
 ## Installation
 
 To install the chart with the release name portal:
