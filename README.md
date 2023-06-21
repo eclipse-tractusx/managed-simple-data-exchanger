@@ -2,8 +2,8 @@
 
 This helm chart installs the SDE application which consists of
      
-   * [Frontend](https://github.com/catenax-ng/tx-managed-simple-data-exchanger-frontend)
-   * [Backend](https://github.com/catenax-ng/tx-managed-simple-data-exchanger-backend) 
+   * [Frontend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend)
+   * [Backend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend) 
     
 
 ## Installation
