@@ -187,8 +187,8 @@ frontend:
   securityContext:
     allowPrivilegeEscalation: false
     capabilities:
-       drop:
-        - ALL
+     drop:
+      - ALL
     readOnlyRootFilesystem: true
     runAsNonRoot: true
     runAsUser: 1000
@@ -197,7 +197,7 @@ frontend:
     type: ClusterIP
     port: 80
     targetPort: 8080
-    
+
   sde:
     endpoints:
         ## Default api exposing health checks etc
@@ -226,17 +226,17 @@ frontend:
           # -- If preset enables certificate generation via cert-manager cluster-wide issuer
         clusterIssuer: "letsencrypt-prod"
 
-  resources: 
+  resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
     limits:
-     cpu: 800m
-     memory: 2Gi
+      cpu: 800m
+      memory: 2Gi
     requests:
-     cpu: 300m
-     memory: 1Gi
+      cpu: 300m
+      memory: 1Gi
 
   autoscaling:
     enabled: false
