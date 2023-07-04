@@ -103,11 +103,11 @@ backend:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
     limits:
-      cpu: 800m
+      cpu: 600m
       memory: 2Gi
     requests:
-      cpu: 500m
-      memory: 1Gi
+      cpu: 600m
+      memory: 2Gi
 
   autoscaling:
     enabled: false
@@ -232,11 +232,11 @@ frontend:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
     limits:
-      cpu: 800m
+      cpu: 600m
       memory: 2Gi
     requests:
-      cpu: 300m
-      memory: 1Gi
+      cpu: 600m
+      memory: 2Gi
 
   autoscaling:
     enabled: false
