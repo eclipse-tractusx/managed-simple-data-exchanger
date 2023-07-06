@@ -2,7 +2,7 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Simple-Data-Exchanger helm chart.
 
-## 0.0.2
+## 0.0.3
 
 ### Change
 
