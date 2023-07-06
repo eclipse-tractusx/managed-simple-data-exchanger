@@ -9,7 +9,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 * changed to v2.0.1 images.
 * enabled usage of existing secret values if secret exists: stops regeneration of random secret values.
 
-# Technical Support
+### Technical Support
 
 * added chart test workflow for lint and install.
 
