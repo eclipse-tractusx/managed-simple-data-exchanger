@@ -1,6 +1,6 @@
 # sde
 
-![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.0.0](https://img.shields.io/badge/AppVersion-2.0.0-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.0.3](https://img.shields.io/badge/AppVersion-0.0.3-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
@@ -45,8 +45,15 @@ A Helm chart for Kubernetes
 | backend.podAnnotations | object | `{}` |  |
 | backend.podSecurityContext.fsGroup | int | `2000` |  |
 | backend.portContainer | int | `8080` |  |
-| backend.resources | object | `{}` |  |
+| backend.resources.limits.cpu | string | `"600m"` |  |
+| backend.resources.limits.memory | string | `"2Gi"` |  |
+| backend.resources.requests.cpu | string | `"600m"` |  |
+| backend.resources.requests.memory | string | `"2Gi"` |  |
 | backend.securityContext.allowPrivilegeEscalation | bool | `false` |  |
+| backend.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| backend.securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| backend.securityContext.runAsNonRoot | bool | `true` |  |
+| backend.securityContext.runAsUser | int | `1001` |  |
 | backend.service.port | int | `7070` |  |
 | backend.service.targetPort | int | `8080` |  |
 | backend.service.type | string | `"ClusterIP"` |  |
@@ -75,10 +82,17 @@ A Helm chart for Kubernetes
 | frontend.podAnnotations | object | `{}` |  |
 | frontend.podSecurityContext.fsGroup | int | `2000` |  |
 | frontend.portContainer | int | `8080` |  |
-| frontend.resources | object | `{}` |  |
+| frontend.resources.limits.cpu | string | `"600m"` |  |
+| frontend.resources.limits.memory | string | `"2Gi"` |  |
+| frontend.resources.requests.cpu | string | `"600m"` |  |
+| frontend.resources.requests.memory | string | `"2Gi"` |  |
 | frontend.sde.endpoints.default.path | string | `"/"` | The path mapping the "default" api is going to be exposed at |
 | frontend.sde.endpoints.default.port | string | `"80"` | The network port, which the "default" api is going to be exposed by the container, pod and service |
 | frontend.securityContext.allowPrivilegeEscalation | bool | `false` |  |
+| frontend.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| frontend.securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| frontend.securityContext.runAsNonRoot | bool | `true` |  |
+| frontend.securityContext.runAsUser | int | `1000` |  |
 | frontend.service.port | int | `80` |  |
 | frontend.service.targetPort | int | `8080` |  |
 | frontend.service.type | string | `"ClusterIP"` |  |
