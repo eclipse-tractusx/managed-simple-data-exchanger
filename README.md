@@ -12,7 +12,7 @@ To install the chart with the release name portal:
 
 ``` $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev ```
 
-```$ helm install sde tractusx-dev/sde```
+```$ helm install simpledataexchanger tractusx-dev/simpledataexchanger```
 
 ## Requirements
 
