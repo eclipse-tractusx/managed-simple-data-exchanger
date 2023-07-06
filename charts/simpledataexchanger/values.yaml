@@ -26,13 +26,11 @@ sdepostgresql:
   enabled: true
   fullnameOverride: "product-sde-postgres"
   auth:
+    postgresPassword: "default"
     username: "sdeuser"
-    port: 5432
+    password: "default"
     database: "sdedb"
-    existingSecret: "sde-postgresql-secrets"
-    secretKeys:
-      adminPasswordKey: "postgres-password"
-      userPasswordKey: "password"
+    port: 5432
 
 backend:
   image:
