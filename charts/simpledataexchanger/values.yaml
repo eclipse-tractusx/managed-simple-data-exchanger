@@ -50,7 +50,7 @@ backend:
   podAnnotations: {}
 
   podSecurityContext:
-    fsGroup: 2000
+    fsGroup: 10102
 
   securityContext:
     allowPrivilegeEscalation: false
@@ -59,7 +59,7 @@ backend:
         - ALL
     readOnlyRootFilesystem: true
     runAsNonRoot: true
-    runAsUser: 1001
+    runAsUser: 10102
 
   service:
     type: ClusterIP
@@ -189,7 +189,7 @@ frontend:
         - ALL
     readOnlyRootFilesystem: true
     runAsNonRoot: true
-    runAsUser: 1000
+    runAsUser: 101
 
   service:
     type: ClusterIP
