@@ -51,6 +51,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
+            runAsUser: {{ .Values.backend.securityContext.runAsUser }}
             {{- toYaml .Values.backend.securityContext | nindent 12 }}
           image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.backend.image.pullPolicy }}

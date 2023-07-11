@@ -49,17 +49,17 @@ backend:
 
   podAnnotations: {}
 
-  podSecurityContext:
-    fsGroup: 10102
+  podSecurityContext: {}
 
   securityContext:
     allowPrivilegeEscalation: false
     capabilities:
       drop:
         - ALL
-    readOnlyRootFilesystem: true
     runAsNonRoot: true
-    runAsUser: 10102
+    runAsUser: 1001
+    fsGroup: 1001
+    
 
   service:
     type: ClusterIP
@@ -179,17 +179,16 @@ frontend:
   portContainer: 8080
   podAnnotations: {}
 
-  podSecurityContext:
-    fsGroup: 2000
+  podSecurityContext: {}
 
   securityContext:
     allowPrivilegeEscalation: false
     capabilities:
       drop:
         - ALL
-    readOnlyRootFilesystem: true
     runAsNonRoot: true
     runAsUser: 101
+    fsGroup: 101
 
   service:
     type: ClusterIP
