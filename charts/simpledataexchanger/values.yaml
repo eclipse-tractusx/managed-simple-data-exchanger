@@ -31,6 +31,7 @@ sdepostgresql:
     password: "default"
     database: "sdedb"
     port: 5432
+    existingSecret: ""
 
 backend:
   image:
