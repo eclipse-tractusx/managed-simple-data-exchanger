@@ -2,14 +2,9 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Simple-Data-Exchanger helm chart.
 
-<<<<<<< HEAD
-## 0.0.4
-
-=======
 ## 0.0.3
->>>>>>> f3c4686c8d2b6630814ae929a68e554d2c241025
 ### Change
-* changed to v2.0.1 images.
+* changed to v2.0.1 docker image version.
 * enabled usage of existing secret values if secret exists: stops regeneration of random secret values.
 
 ### Technical Support
