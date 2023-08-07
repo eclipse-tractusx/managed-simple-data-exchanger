@@ -166,6 +166,14 @@ backend:
       connector.discovery.clientSecret=default
       portal.backend.hostname=default
       springdoc.api-docs.path=/api-docs
+      bpndiscovery.hostname=default
+      discovery.authentication.url=default
+      discovery.clientId=default
+      discovery.clientSecret=default
+      discovery.grantType=default
+      edc.consumer.protocol.path=default
+      edc.consumer.managementpath=default
+      edc.managementpath=default
 
 frontend:
   image:
