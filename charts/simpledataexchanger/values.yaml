@@ -174,6 +174,16 @@ backend:
       edc.consumer.protocol.path=default
       edc.consumer.managementpath=default
       edc.managementpath=default
+      partner.pool.hostname=default
+      partner.pool.authentication.url=default
+      partner.pool.clientId=default
+      partner.pool.clientSecret=default
+      partner.pool.grantType=default
+      portal.backend.hostname=default
+      portal.backend.authentication.url=default
+      portal.backend.clientId=default
+      portal.backend.clientSecret=default
+      portal.backend.grantType=default
 
 frontend:
   image:
