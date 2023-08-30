@@ -5,6 +5,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 ## 0.0.7
 ### Change
 * changed to v2.0.9 docker image version.
+* added license header.
 
 
 ## 0.0.6
