@@ -28,7 +28,7 @@ A Helm chart for Kubernetes
 | backend.configuration.properties | string | `"keycloak.clientid=default\nspring.security.oauth2.resourceserver.jwt.issuer-uri=default\nmanagement.endpoint.health.probes.enabled=true\nmanagement.health.readinessstate.enabled=true\nmanagement.health.livenessstate.enabled=true\nmanagement.endpoints.web.exposure.include=*\nspring.lifecycle.timeout-per-shutdown-phase=30s\nlogging.level.org.springframework.security.web.csrf=INFO\nspring.servlet.multipart.enabled=true\nspring.main.allow-bean-definition-overriding=true\nspring.servlet.multipart.file-size-threshold=2KB\nspring.servlet.multipart.max-file-size=200MB\nspring.servlet.multipart.max-request-size=215MB\nserver.servlet.context-path=/api\nspring.flyway.baseline-on-migrate=true\nspring.flyway.locations=classpath:/flyway\nspring.datasource.driver-class-name=org.postgresql.Driver\nspring.jpa.hibernate.ddl-auto=update\nspring.jpa.open-in-view=false\nfile.upload-dir=./temp/\nlogging.level.org.apache.http=info\nlogging.level.root=info\ndigital-twins.hostname=default\ndigital-twins.authentication.url=default\ndigital-twins.authentication.clientId=default\ndigital-twins.authentication.clientSecret=default\ndigital-twins.authentication.grantType=client_credentials\nedc.hostname=default\nedc.apiKeyHeader=default\nedc.apiKey=default\nedc.consumer.hostname=default\nedc.consumer.apikeyheader=default\nedc.consumer.apikey=default\nedc.consumer.datauri=/api/v1/ids/data\ndft.hostname=default\ndft.apiKeyHeader=default\ndft.apiKey=default\nmanufacturerId=default\npartner.pool.hostname=default\nconnector.discovery.token-url=default\nconnector.discovery.clientId=default\nconnector.discovery.clientSecret=default\nportal.backend.hostname=default\nspringdoc.api-docs.path=/api-docs"` |  |
 | backend.fullnameOverride | string | `""` |  |
 | backend.image.pullPolicy | string | `"Always"` |  |
-| backend.image.repository | string | `"ghcr.io/catenax-ng/tx-managed-simple-data-exchanger-backend"` |  |
+| backend.image.repository | string | `"tractusx/managed-simple-data-exchanger-backend"` |  |
 | backend.image.tag | string | `""` |  |
 | backend.imagePullSecrets | list | `[]` |  |
 | backend.ingresses[0].annotations | object | `{}` |  |
@@ -66,7 +66,7 @@ A Helm chart for Kubernetes
 | frontend.configuration.properties | string | `"REACT_APP_API_URL=\nREACT_APP_KEYCLOAK_URL=\nREACT_APP_KEYCLOAK_REALM=\nREACT_APP_CLIENT_ID=\nREACT_APP_FILESIZE=\nREACT_APP_DEFAULT_COMPANY_BPN="` |  |
 | frontend.fullnameOverride | string | `""` |  |
 | frontend.image.pullPolicy | string | `"Always"` |  |
-| frontend.image.repository | string | `"ghcr.io/catenax-ng/tx-managed-simple-data-exchanger-frontend"` |  |
+| frontend.image.repository | string | `"tractusx/managed-simple-data-exchanger-frontend"` |  |
 | frontend.image.tag | string | `""` |  |
 | frontend.imagePullSecrets | list | `[]` |  |
 | frontend.ingresses[0].annotations."kubernetes.io/tls-acme" | string | `"true"` |  |
