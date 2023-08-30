@@ -5,7 +5,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 ## 0.0.8
 ### Change
 * changed to v2.0.10 docker image version.
-* bump version of application v2.0.10.
+* bump version of application v2.0.10
 
 ## 0.0.7
 ### Change
