@@ -66,7 +66,7 @@ A Helm chart for Kubernetes
 | frontend.configuration.properties | string | `"REACT_APP_API_URL=\nREACT_APP_KEYCLOAK_URL=\nREACT_APP_KEYCLOAK_REALM=\nREACT_APP_CLIENT_ID=\nREACT_APP_FILESIZE=\nREACT_APP_DEFAULT_COMPANY_BPN="` |  |
 | frontend.fullnameOverride | string | `""` |  |
 | frontend.image.pullPolicy | string | `"Always"` |  |
-| frontend.image.repository | string | `"gtractusx/managed-simple-data-exchanger-frontend"` |  |
+| frontend.image.repository | string | `"tractusx/managed-simple-data-exchanger-frontend"` |  |
 | frontend.image.tag | string | `""` |  |
 | frontend.imagePullSecrets | list | `[]` |  |
 | frontend.ingresses[0].annotations."kubernetes.io/tls-acme" | string | `"true"` |  |
