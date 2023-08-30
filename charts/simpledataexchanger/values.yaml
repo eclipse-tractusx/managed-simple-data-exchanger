@@ -35,7 +35,7 @@ sdepostgresql:
 
 backend:
   image:
-    repository: ghcr.io/catenax-ng/tx-managed-simple-data-exchanger-backend
+    repository: tractusx/managed-simple-data-exchanger-backend
     pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
     tag: ""
@@ -187,7 +187,7 @@ backend:
 
 frontend:
   image:
-    repository: ghcr.io/catenax-ng/tx-managed-simple-data-exchanger-frontend
+    repository: tractusx/managed-simple-data-exchanger-frontend
     pullPolicy: Always
       # Overrides the image tag whose default is the chart appVersion.
     tag: ""
