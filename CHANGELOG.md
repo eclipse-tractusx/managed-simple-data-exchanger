@@ -5,6 +5,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 ## 0.0.8
 ### Change
 * changed to v2.1.0 docker image version.
+* docs folder added and read me updated.
 
 ## 0.0.7
 ### Change
