@@ -7,6 +7,9 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 * changed to v2.1.0 docker image version.
 * docs folder added and read me updated.
 
+### Technical Support
+* added meta file of tractusx.
+
 ## 0.0.7
 ### Change
 * changed to v2.0.11 docker image version.
