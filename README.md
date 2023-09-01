@@ -5,7 +5,6 @@ This helm chart installs the SDE application which consists of
    * [Frontend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend)
    * [Backend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend) 
     
-
 ## Installation
 
 To install the chart with the release name portal:
@@ -23,6 +22,9 @@ To install the chart with the release name portal:
 	
 ### Licenses
 For used licenses, please see the [NOTICE](https://github.com/eclipse-tractusx/managed-simple-data-exchanger/blob/main/NOTICE.md).
+
+### Documentation
+ Docs reference link can be found here [docs](https://github.com/catenax-ng/tx-managed-simple-data-exchanger/blob/main/docs/install.md).
 
 ## Notice for Docker image
 
