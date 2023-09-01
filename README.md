@@ -5,7 +5,6 @@ This helm chart installs the SDE application which consists of
    * [Frontend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend)
    * [Backend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend) 
     
-
 ## Installation
 
 To install the chart with the release name portal:
