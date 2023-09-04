@@ -90,9 +90,11 @@ jobs:
         run: ct install --charts charts/simpledataexchanger --config charts/chart-testing-config.yaml
         if: ${{ env.CHART_CHANGED == 'true' }}
 
-      - name: Run helm install
+      - name: Run helm install and dependency update
         run: |
-          helm repo add bitnami https://charts.bitnami.com/bitnami
+          cd charts/simpledataexchanger
+          helm repo add bitnami https://charts.bitnami.com/bitnami          
+          helm dependency update
           helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
           helm install simpledataexchanger charts/simpledataexchanger --namespace install --create-namespace
         if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
