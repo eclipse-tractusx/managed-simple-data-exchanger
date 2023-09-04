@@ -94,7 +94,7 @@ jobs:
         run: |
           cd charts/simpledataexchanger
           helm repo add bitnami https://charts.bitnami.com/bitnami          
-          helm dependency update
+          helm dependency update charts/simpledataexchanger
           helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
           helm install simpledataexchanger charts/simpledataexchanger --namespace install --create-namespace
         if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
