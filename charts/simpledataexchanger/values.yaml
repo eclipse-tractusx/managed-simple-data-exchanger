@@ -26,7 +26,7 @@ sdepostgresql:
   enabled: true
   fullnameOverride: "product-sde-postgres"
   auth:
-    postgresPassword: "default"
+    postgresPassword: ""
     username: "sdeuser"
     password: "default"
     database: "sdedb"
@@ -58,7 +58,7 @@ backend:
       drop:
         - ALL
     runAsNonRoot: true
-    runAsUser: 1001
+    runAsUser: 101
 
   service:
     type: ClusterIP
