@@ -24,14 +24,14 @@ metadata:
   name: {{ include "sde.fullname" . }}-backend
   namespace: {{ .Release.Namespace | default "default" | quote }}
   labels:
-    {{- include "sde.labels" . | nindent 4 }}
+    {{- include "sde.backend.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.backend.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "sde.selectorLabels" . | nindent 6 }}
+      {{- include "sde.backend.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.backend.podAnnotations }}
@@ -39,7 +39,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "sde.selectorLabels" . | nindent 8 }}
+        {{- include "sde.backend.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.backend.imagePullSecrets }}
       imagePullSecrets:

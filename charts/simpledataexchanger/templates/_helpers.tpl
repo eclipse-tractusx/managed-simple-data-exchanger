@@ -63,11 +63,74 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
 {{/*
+backend Common labels
+*/}}
+{{- define "sde.backend.labels" -}}
+helm.sh/chart: {{ include "sde.chart" . }}
+{{ include "sde.backend.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
+frontend Common labels
+*/}}
+{{- define "sde.frontend.labels" -}}
+helm.sh/chart: {{ include "sde.chart" . }}
+{{ include "sde.frontend.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
 Selector labels
 */}}
 {{- define "sde.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "sde.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+backend Selector labels
+*/}}
+{{- define "sde.backend.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "sde.name" . }}-backend
+app.kubernetes.io/instance: {{ .Release.Name }}-backend
+{{- end }}
+
+{{/*
+frontend Selector labels
+*/}}
+{{- define "sde.frontend.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "sde.name" . }}-frontend
+app.kubernetes.io/instance: {{ .Release.Name }}-frontend
+{{- end }}
+
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "sde.backend.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "sde.fullname" .) .Values.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}
+{{- end }}
+{{- end }}
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "sde.frontend.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "sde.fullname" .) .Values.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}
+{{- end }}
 {{- end }}
 
 {{/*

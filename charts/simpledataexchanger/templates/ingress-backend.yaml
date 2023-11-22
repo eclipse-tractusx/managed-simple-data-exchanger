@@ -17,14 +17,14 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 ################################################################################
-{{- $fullName := include "sde.fullname" . }}-backend
-{{- $labels := include "sde.labels" . | nindent 4 }}
+{{- $fullName := include "sde.fullname" . }}
+{{- $labels := include "sde.backend.labels" . | nindent 4 }}
 {{- $gitVersion := .Capabilities.KubeVersion.GitVersion }}
 {{- $sdeEndpoints := .Values.backend.backend.endpoints }}
 {{- $namespace := .Release.Namespace }}
 {{- range .Values.backend.ingresses }}
 {{- if and .enabled .endpoints }}
-{{- $ingressName := printf "%s-%s" $fullName .hostname }}
+{{- $ingressName := printf "%s-backend-%s" $fullName .hostname }}
 ---
 {{- if semverCompare ">=1.19-0" $gitVersion }}
 apiVersion: networking.k8s.io/v1
@@ -83,7 +83,7 @@ spec:
             backend:
               {{- if semverCompare ">=1.19-0" $gitVersion }}
               service:
-                name: {{ $fullName }}
+                name: {{ $fullName }}-backend
                 port:
                   number: {{ $mapping.port }}
               {{- else }}

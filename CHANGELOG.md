@@ -2,6 +2,10 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Simple-Data-Exchanger helm chart.
 
+## 1.0.0
+### Change
+* changed to v2.3.0 docker image version.
+
 ## 0.0.9
 ### Change
 * changed to v2.1.1 docker image version.

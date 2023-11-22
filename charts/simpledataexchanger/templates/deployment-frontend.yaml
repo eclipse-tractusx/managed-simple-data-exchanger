@@ -22,12 +22,12 @@ kind: Deployment
 metadata:
   name: {{ include "sde.fullname" . }}-frontend
   labels:
-    {{- include "sde.labels" . | nindent 4 }}
+    {{- include "sde.frontend.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "sde.selectorLabels" . | nindent 6 }}
+      {{- include "sde.frontend.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.frontend.podAnnotations }}
@@ -35,7 +35,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "sde.selectorLabels" . | nindent 8 }}
+        {{- include "sde.frontend.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.frontend.imagePullSecrets }}
       imagePullSecrets:

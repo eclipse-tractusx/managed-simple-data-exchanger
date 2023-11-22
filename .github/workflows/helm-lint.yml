@@ -41,7 +41,7 @@ on:
         upgrade_from:
           description: 'chart version to upgrade from'
           # chart version from 3.1 release as default
-          default: '2.0.0'
+          default: '0.0.9'
           required: false
           type: string
 
@@ -98,11 +98,11 @@ jobs:
           helm install simpledataexchanger charts/simpledataexchanger --namespace install --create-namespace
         if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
         
-#      - name: Run helm upgrade
-#        run: |
-#          helm repo add bitnami https://charts.bitnami.com/bitnami
-#          helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
-#          helm install simpledataexchanger tractusx-dev/simpledataexchanger --version ${{ github.event.inputs.upgrade_from || '2.0.0' }} --namespace upgrade --create-namespace
-#          helm dependency update charts/simpledataexchanger
-#          helm upgrade simpledataexchanger charts/simpledataexchanger --namespace upgrade
-#        if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
+      - name: Run helm upgrade
+        run: |
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
+          helm install simpledataexchanger tractusx-dev/simpledataexchanger --version ${{ github.event.inputs.upgrade_from || '0.0.9' }} --namespace upgrade --create-namespace
+          helm dependency update charts/simpledataexchanger
+          helm upgrade simpledataexchanger charts/simpledataexchanger --namespace upgrade
+        if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'

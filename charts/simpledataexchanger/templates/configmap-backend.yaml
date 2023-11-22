@@ -23,7 +23,7 @@ metadata:
   name: {{ include "sde.fullname" . }}-backend-configmap
   namespace: {{ .Release.Namespace | default "default" | quote }}
   labels:
-    {{- include "sde.labels" . | nindent 4 }}
+    {{- include "sde.backend.labels" . | nindent 4 }}
 data:
   configuration.properties: |-
     {{- .Values.backend.configuration.properties | nindent 4 }}
