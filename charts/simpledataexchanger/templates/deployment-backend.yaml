@@ -58,13 +58,25 @@ spec:
           ports:
           - containerPort: {{ .Values.backend.portContainer }}
           env:
+            - name: SPRING_DATASOURCE_USERNAME
+              value: {{ .Values.sdepostgresql.auth.username | required ".Values.sdepostgresql.auth.username is required" | quote }}
+            {{- if .Values.sdepostgresql.fullnameOverride }}
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:postgresql://{{ .Values.sdepostgresql.fullnameOverride }}:{{ .Values.sdepostgresql.auth.port }}/{{ .Values.sdepostgresql.auth.database }}"
-            - name: SPRING_DATASOURCE_USERNAME
-              value: {{ .Values.sdepostgresql.auth.username | required ".Values.sdepostgresql.auth.username is required" | quote }}             
             - name: SPRING_DATASOURCE_PASSWORD
-              value: {{ .Values.sdepostgresql.auth.password | required ".Values.sdepostgresql.auth.password is required" | quote}}
-              
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.sdepostgresql.fullnameOverride }}
+                  key: "password"
+            {{- else }}
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:postgresql://{{ include "sde.fullname" . }}-sdepostgresql:{{ .Values.sdepostgresql.auth.port }}/{{ .Values.sdepostgresql.auth.database }}"
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "sde.fullname" . }}-sdepostgresql
+                  key: "password"
+            {{- end }}    
           envFrom:
             - configMapRef:
                 name: {{ include "sde.fullname" . }}-backend-configmap
