@@ -58,7 +58,7 @@ backend:
       drop:
         - ALL
     runAsNonRoot: true
-    runAsUser: 101
+    runAsUser: 1001
 
   service:
     type: ClusterIP
