@@ -24,7 +24,7 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: {{ include "sde.fullname" . }}-frontend
   labels:
-    {{- include "sde.labels" . | nindent 4 }}
+    {{- include "sde.frontend.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1

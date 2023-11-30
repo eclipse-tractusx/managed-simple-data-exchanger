@@ -2,6 +2,20 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Simple-Data-Exchanger helm chart.
 
+## 0.1.0 
+### Added 
+* PostgreSQL random password generation.
+### Change
+* changed to v2.3.1 docker image version.
+* fixed custom user permission issue in docker image.
+* Veracode vulnerability fix in AppV- 2.3.1
+
+## 0.0.10 [non-release]
+### Added 
+* PostgreSQL random password generation.
+### Change
+* changed to v2.3.0 docker image version.
+
 ## 0.0.9
 ### Change
 * changed to v2.1.1 docker image version.

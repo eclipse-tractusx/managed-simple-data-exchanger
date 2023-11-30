@@ -20,7 +20,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "sde.fullname" . }}-backend-test-connection"
+  name: "{{ include "sde.fullname" . }}-frontend-test-connection"
   labels:
     {{- include "sde.labels" . | nindent 4 }}
   annotations:
@@ -30,5 +30,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "sde.fullname" . }}-backend:{{ .Values.backend.service.port }}']
+      args: ['{{ include "sde.fullname" . }}-frontend:{{ .Values.frontend.service.port }}']
   restartPolicy: Never
