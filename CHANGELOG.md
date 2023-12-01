@@ -2,6 +2,11 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Simple-Data-Exchanger helm chart.
 
+## 0.1.1
+### Change
+* helm-lint workflow corrected.
+* helm-chart bumped version to 0.1.1 
+
 ## 0.1.0 
 ### Added 
 * PostgreSQL random password generation.
