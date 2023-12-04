@@ -97,7 +97,7 @@ jobs:
           run: |
             helm repo add bitnami https://charts.bitnami.com/bitnami
             helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
-            helm install simpledataexchanger charts/sde --version ${{ github.event.inputs.upgrade_from || '0.1.1' }}
+            helm install simpledataexchanger tractusx-dev/sde --version ${{ github.event.inputs.upgrade_from || '0.1.0' }}
             helm dependency update charts/simpledataexchanger
             helm upgrade impledataexchanger charts/simpledataexchanger
           if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
