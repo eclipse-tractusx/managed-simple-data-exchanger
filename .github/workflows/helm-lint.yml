@@ -99,7 +99,7 @@ jobs:
             helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
             helm install simpledataexchanger tractusx-dev/sde --version ${{ github.event.inputs.upgrade_from || '0.1.0' }}
             helm dependency update charts/simpledataexchanger
-            helm upgrade impledataexchanger charts/simpledataexchanger
+            helm upgrade simpledataexchanger charts/simpledataexchanger
           if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
 
 
