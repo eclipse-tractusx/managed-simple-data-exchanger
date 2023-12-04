@@ -20,14 +20,17 @@
 name:  SDE Lint and Test Charts
 
 on:
+  ### Trigger the workflow on push on main branch and path charts/**
   push:
     branches:
       - main
     paths:
       - 'charts/**'
-    pull_request:
+  ### Trigger the workflow on pull request on path charts/**
+  pull_request:
       paths:
-       - charts/**    
+        - charts/**
+  ### Trigger the workflow manually 
        
   workflow_dispatch:
       inputs:
