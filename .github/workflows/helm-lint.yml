@@ -43,7 +43,7 @@ on:
         upgrade_from:
           description: 'chart version to upgrade from'
           # chart version from 3.2 release as default
-          default: '0.1.0'
+          default: '0.1.1'
           required: false
           type: string
 
@@ -88,7 +88,7 @@ jobs:
           run: ct lint --validate-maintainers=false --target-branch ${{ github.event.repository.default_branch }}
 
         - name: Run chart-testing (install)
-          run: ct install --charts charts/app-dashboard
+          run: ct install --charts charts/simpledataexchanger
           if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
 
         # Upgrade the released chart version with the locally available chart
@@ -97,7 +97,7 @@ jobs:
           run: |
             helm repo add bitnami https://charts.bitnami.com/bitnami
             helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
-            helm install simpledataexchanger charts/sde --version ${{ github.event.inputs.upgrade_from || '0.1.0' }}
+            helm install simpledataexchanger charts/sde --version ${{ github.event.inputs.upgrade_from || '0.1.1' }}
             helm dependency update charts/simpledataexchanger
             helm upgrade impledataexchanger charts/simpledataexchanger
           if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'

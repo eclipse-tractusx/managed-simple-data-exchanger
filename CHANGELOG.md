@@ -2,6 +2,13 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Simple-Data-Exchanger helm chart.
 
+## 0.1.2
+### Change
+* changed to v2.3.2 docker image version.
+* veracode vulnerability fix in AppV- 2.3.2.
+* updated backend-deployment.yaml for condition check.
+* helm lint workflow fix for dependency. 
+
 ## 0.1.1
 ### Change
 * helm-lint workflow corrected.
