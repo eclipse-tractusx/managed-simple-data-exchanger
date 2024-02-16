@@ -1,6 +1,6 @@
 #################################################################################
-# Copyright (c) 2023 T-Systems International GmbH
-# Copyright (c) 2023 Contributors to the Eclipse Foundation
+# Copyright (c) 2023,2024 T-Systems International GmbH
+# Copyright (c) 2023,2024 Contributors to the Eclipse Foundation
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -28,7 +28,8 @@ sdepostgresql:
   auth:
     postgresPassword: ""
     username: "sdeuser"
-    password: ""
+    password: ""y
+    
     database: "sdedb"
     port: 5432
     existingSecret: ""
@@ -183,6 +184,11 @@ backend:
       portal.backend.clientId=default
       portal.backend.clientSecret=default
       portal.backend.grantType=default
+      policy.hub.hostname=default
+      policy.hub.authentication.url=default
+      policy.hub.clientId=default
+      policy.hub.clientSecret=default
+      policy.hub.grantType=client_credentials
 
 frontend:
   image:
