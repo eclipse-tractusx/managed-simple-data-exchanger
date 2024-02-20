@@ -4,9 +4,9 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ## 0.1.4
 ### Change
-- changed to v2.3.4 docker image version.
+- changed to v2.3.5 docker image version.
 - fixed build docker image change for vulnerability issue.
-- backend configuratios properties updated in values.yaml.
+- backend configurations properties updated in values.yaml.
 
 
 ## 0.1.3
