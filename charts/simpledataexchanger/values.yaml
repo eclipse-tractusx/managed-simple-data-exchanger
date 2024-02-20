@@ -28,7 +28,7 @@ sdepostgresql:
   auth:
     postgresPassword: ""
     username: "sdeuser"
-    password: ""y
+    password: ""
     
     database: "sdedb"
     port: 5432
