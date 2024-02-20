@@ -29,7 +29,6 @@ sdepostgresql:
     postgresPassword: ""
     username: "sdeuser"
     password: ""
-    
     database: "sdedb"
     port: 5432
     existingSecret: ""
