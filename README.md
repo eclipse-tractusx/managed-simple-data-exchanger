@@ -1,8 +1,20 @@
+## SDE Simple-Data-Exchanger
+
+What is SDE?
+In order to allow Data Providers and Data Consumers to easily participate in relevant Use Cases, a service for low-effort data sharing was needed. The service would add a convenience layer around already established CX components, such as EDC and Digital Twin Registry, simplifying their use.
+
+It consists of two repositories Backend and Frontend.
+   * [managed-simple-data-exchanger-frontend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend) 
+   * [managed-simple-data-exchanger-backend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend) 
+
+for more information [ARC42](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend/blob/main/docs/Arc42.md)
+
+
 ## Helm chart for Simple-Data-Exchanger
 
 This helm chart installs the SDE application which consists of
      
-   * [Frontend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend)
+   * [Frontend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend) 
    * [Backend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend) 
     
 ## Installation
