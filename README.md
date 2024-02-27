@@ -7,16 +7,13 @@ It consists of two repositories Backend and Frontend.
    * [managed-simple-data-exchanger-frontend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend) 
    * [managed-simple-data-exchanger-backend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend) 
 
-for more information [ARC42](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend/blob/main/docs/Arc42.md)
+for more information [DOCS](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend/blob/main/docs/Arc42.md)
 
 
 ## Helm chart for Simple-Data-Exchanger
 
-This helm chart installs the SDE application which consists of
+This helm chart installs the SDE application which consists of backend and frontend configuration.
      
-   * [Frontend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend) 
-   * [Backend](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend) 
-    
 ## Installation
 
 To install the chart with the release name portal:
