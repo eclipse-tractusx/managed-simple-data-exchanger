@@ -13,6 +13,7 @@ for more information [DOCS](https://github.com/eclipse-tractusx/managed-simple-d
 ## Helm chart for Simple-Data-Exchanger
 
 This helm chart installs the SDE application which consists of backend and frontend configuration.
+   * [chart](https://github.com/catenax-ng/tx-managed-simple-data-exchanger/blob/main/charts/simpledataexchanger/values.yaml)
      
 ## Installation
 
