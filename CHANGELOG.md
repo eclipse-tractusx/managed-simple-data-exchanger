@@ -2,6 +2,11 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Simple-Data-Exchanger helm chart.
 
+## 0.1.6
+### Change
+- changed to v2.3.7 docker image version.
+- fixed bug issue. [#147](https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend/issues/147)
+
 ## 0.1.5
 ### Change
 - changed to v2.3.6 docker image version.
