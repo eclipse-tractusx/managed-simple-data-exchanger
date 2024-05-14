@@ -43,7 +43,7 @@ on:
         upgrade_from:
           description: 'chart version to upgrade from'
           # chart version from 3.2 release as default
-          default: '0.1.5'
+          default: '0.1.6'
           required: false
           type: string
 
@@ -97,7 +97,7 @@ jobs:
           run: |
             helm repo add bitnami https://charts.bitnami.com/bitnami
             helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
-            helm install simpledataexchanger tractusx-dev/sde --version ${{ github.event.inputs.upgrade_from || '0.1.5' }}
+            helm install simpledataexchanger tractusx-dev/sde --version ${{ github.event.inputs.upgrade_from || '0.1.6' }}
             helm dependency update charts/simpledataexchanger
             helm upgrade simpledataexchanger charts/simpledataexchanger
           if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
