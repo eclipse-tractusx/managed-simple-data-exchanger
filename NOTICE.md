@@ -29,8 +29,8 @@ SPDX-License-Identifier: Apache-2.0
 The project maintains the following source code repositories 
 in the GitHub organization https://github.com/eclipse-tractusx:
 
-* https://github.com/catenax-ng/tx-managed-simple-data-exchanger-backend
-* https://github.com/catenax-ng/tx-managed-simple-data-exchanger-frontend
+* https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend
+* https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend
 
 
 ## Third-party Content
