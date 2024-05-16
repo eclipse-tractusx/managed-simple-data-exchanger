@@ -34,7 +34,7 @@ To install the chart with the release name portal:
 For used licenses, please see the [NOTICE](https://github.com/eclipse-tractusx/managed-simple-data-exchanger/blob/main/NOTICE.md).
 
 ### Documentation
- Docs reference link can be found here [docs](https://github.com/catenax-ng/tx-managed-simple-data-exchanger/blob/main/docs/install.md).
+ Docs reference link can be found here [docs](https://github.com/eclipse-tractusx/managed-simple-data-exchanger/blob/main/docs/Install.md).
 
 ## Notice for Docker image
 
