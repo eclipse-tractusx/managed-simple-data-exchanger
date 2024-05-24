@@ -2,6 +2,16 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Simple-Data-Exchanger helm chart.
 
+## 0.1.9
+### Change
+- changed to v2.4.1 docker image version.
+- configuration properties added for sdebackend in value.yaml.
+
+## 0.1.8
+### Change
+- bumped in helm chart version.
+- Updated README.md.
+
 ## 0.1.7
 ### Change
 - changed to v2.4.0 docker image version.
