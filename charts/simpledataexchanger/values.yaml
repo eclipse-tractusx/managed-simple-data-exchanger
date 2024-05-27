@@ -188,6 +188,9 @@ backend:
       policy.hub.clientId=default
       policy.hub.clientSecret=default
       policy.hub.grantType=client_credentials
+      bpdm.provider.edc.dataspace.api=default
+      bpdm.provider.bpnl=default
+      bpdm.provider.edc.public.api=default
 
 frontend:
   image:
