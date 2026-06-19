@@ -38,7 +38,7 @@ jobs:
     steps:
       # fetch-depth: 0 is required to determine differences in chart(s)
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@eef6142e2b95616222b07d579f323a1a36746862 # v3.5.3
         with:
           fetch-depth: 0
 
@@ -48,7 +48,7 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       - name: Install Helm
-        uses: azure/setup-helm@v3
+        uses: azure/setup-helm@fe7b40cdcaf2037de0f88569da3a964a5d3d1912 # v3.5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       
@@ -59,6 +59,6 @@ jobs:
           helm dependency update
   
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.4.1
+        uses: helm/chart-releaser-action@a3454e40a1f5a53e1aa202601397d0224a77114e # v1.4.1
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
