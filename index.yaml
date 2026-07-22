@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   sde:
   - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2026-07-22T15:08:34.944640956Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgres
+      repository: oci://registry-1.docker.io/cloudpirates
+      version: 0.11.0
+    description: A Helm chart for simple data exchanger
+    digest: c91dbd791552d7c18668ee7189189c590637f1278e59f75a004cb27814130605
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-1.0.6/sde-1.0.6.tgz
+    version: 1.0.6
+  - apiVersion: v2
     appVersion: 2.4.3
     created: "2024-07-31T11:16:05.83404073Z"
     dependencies:
@@ -343,4 +361,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.4/sde-0.0.4.tgz
     version: 0.0.4
-generated: "2024-07-31T11:16:05.834158951Z"
+generated: "2026-07-22T15:08:34.944813419Z"
